@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javier Peña · Desarrollador de Software</title>
+  <meta name="description" content="Portafolio de Javier Peña, estudiante de Ingeniería en Computación y agente de soporte de hosting en camino a convertirse en desarrollador de software.">
+
+  <!-- Favicon: glifo de terminal ">_" en un cuadrado -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230B1220'/%3E%3Ctext x='4' y='17' font-family='monospace' font-size='11' fill='%23F2A93B'%3E%3E_%3C/text%3E%3C/svg%3E">
+
+  <!-- Tipografías: Space Grotesk (display), IBM Plex Sans (texto), IBM Plex Mono (código/etiquetas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Ir al inicio">
+        <span class="logo__prompt">javier@dev</span><span class="logo__cursor" aria-hidden="true">_</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#stack" class="nav__link">Stack</a></li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <a href="assets/cv/Javier_Pena_CV.pdf" download class="btn btn--ghost btn--small nav__cta">
+          Descargar CV
+        </a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav">
+        <svg class="icon icon--menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===================== HERO / INICIO ===================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+
+        <div class="hero__content" data-reveal>
+          <p class="eyebrow">$ ./iniciar.sh</p>
+          <h1 class="hero__name">Javier Peña</h1>
+          <p class="hero__tagline">De administrar servidores a construir software.</p>
+
+          <p class="hero__text">
+            Curso el noveno semestre de Ingeniería en Computación en el Instituto Universitario
+            Politécnico Santiago Mariño, sede Valencia. Hoy trabajo como Agente de Soporte de
+            Hosting, resolviendo infraestructura y servidores; mi meta es consolidar una carrera
+            como programador de software. Sigo aprendiendo cada día más y fortaleciendo mi
+            conocimiento para lograrlo.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+            <a href="assets/cv/Javier_Pena_CV.pdf" download class="btn btn--secondary">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Descargar CV
+            </a>
+          </div>
+
+          <p class="uptime">
+            <span class="uptime__label">uptime@formación:</span>
+            <span id="uptimeCounter">0</span> días
+            <span class="uptime__caption">— desde el inicio de mi carrera universitaria (2022)</span>
+          </p>
+        </div>
+
+        <div class="hero__terminal" data-reveal aria-hidden="true">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span class="terminal__dot terminal__dot--red"></span>
+              <span class="terminal__dot terminal__dot--amber"></span>
+              <span class="terminal__dot terminal__dot--green"></span>
+              <span class="terminal__title">javier@dev-server: ~</span>
+            </div>
+            <pre class="terminal__body" id="terminalBody"></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <p class="eyebrow" data-reveal>$ cat sobre-mi.md</p>
+        <h2 class="section__heading" data-reveal>Sobre mí</h2>
+
+        <div class="about__grid">
+          <div class="about__text" data-reveal>
+            <p>
+              Soy Javier Peña, estudiante de Ingeniería en Computación cursando el noveno
+              semestre en el Instituto Universitario Politécnico Santiago Mariño, sede
+              Valencia, con enfoque en teoría de la computación y sistemas distribuidos.
+            </p>
+            <p>
+              Actualmente me desempeño profesionalmente como Agente de Soporte de Hosting,
+              brindando atención técnica y resolviendo infraestructura en plataformas de
+              hosting y servidores VPS/dedicados. Ese contacto diario con servidores,
+              terminales y sistemas en producción es también el terreno donde estoy
+              construyendo mi camino como desarrollador de software.
+            </p>
+            <p>
+              Sigo aprendiendo cada día más y fortaleciendo mi conocimiento, combinando la
+              disciplina de la administración de sistemas con la lógica de la programación
+              para crear soluciones más completas.
+            </p>
+
+            <ul class="chip-list">
+              <li class="chip">Comunicación efectiva</li>
+              <li class="chip">Trabajo en equipo</li>
+              <li class="chip">Adaptabilidad</li>
+              <li class="chip">Resolución de problemas</li>
+              <li class="chip">Gestión del tiempo</li>
+              <li class="chip">Pensamiento crítico</li>
+            </ul>
+          </div>
+
+          <div class="about__card" data-reveal>
+            <div class="infocard">
+              <p class="infocard__header">javier@dev-server</p>
+              <div class="infocard__rule"></div>
+              <dl class="infocard__list">
+                <div class="infocard__row">
+                  <dt>Educación</dt>
+                  <dd>Ing. en Computación — 8vo semestre</dd>
+                </div>
+                <div class="infocard__row">
+                  <dt>Casa de estudios</dt>
+                  <dd>IU Politécnico Santiago Mariño, sede Valencia</dd>
+                </div>
+                <div class="infocard__row">
+                  <dt>Rol actual</dt>
+                  <dd>Agente de Soporte de Hosting</dd>
+                </div>
+                <div class="infocard__row">
+                  <dt>Enfoque</dt>
+                  <dd>Desarrollo de Software</dd>
+                </div>
+                <div class="infocard__row">
+                  <dt>Idiomas</dt>
+                  <dd>Español (nativo) · Inglés (B2 lectura)</dd>
+                </div>
+                <div class="infocard__row">
+                  <dt>Estado</dt>
+                  <dd><span class="status-dot status-dot--live" aria-hidden="true"></span> Aprendiendo activamente</dd>
+                </div>
+              </dl>
+              <div class="infocard__swatches" aria-hidden="true">
+                <span class="swatch swatch--1"></span>
+                <span class="swatch swatch--2"></span>
+                <span class="swatch swatch--3"></span>
+                <span class="swatch swatch--4"></span>
+                <span class="swatch swatch--5"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STACK / TECNOLOGÍAS ===================== -->
+    <section class="section section--alt" id="stack">
+      <div class="container">
+        <p class="eyebrow" data-reveal>$ ls ./habilidades --detalle</p>
+        <h2 class="section__heading" data-reveal>Stack &amp; herramientas</h2>
+        <p class="section__lead" data-reveal>
+          Las tecnologías con las que trabajo día a día, entre el desarrollo de software y la
+          administración de infraestructura.
+        </p>
+
+        <div class="skills-grid" data-reveal>
+          <div class="skill-card">
+            <span class="skill-card__mono">Py</span>
+            <h3 class="skill-card__name">Python</h3>
+            <p class="skill-card__desc">Automatización, scripts e integración con modelos de IA.</p>
+          </div>
+          <div class="skill-card">
+            <span class="skill-card__mono">Ns</span>
+            <h3 class="skill-card__name">NestJS</h3>
+            <p class="skill-card__desc">Arquitectura backend escalable y modular con TypeScript.</p>
+          </div>
+          <div class="skill-card">
+            <span class="skill-card__mono">BD</span>
+            <h3 class="skill-card__name">MySQL</h3>
+            <p class="skill-card__desc">Modelado y gestión de bases de datos relacionales.</p>
+          </div>
+          <div class="skill-card">
+            <span class="skill-card__mono">JS</span>
+            <h3 class="skill-card__name">JavaScript</h3>
+            <p class="skill-card__desc">Desarrollo y lógica de aplicación.</p>
+          </div>
+          <div class="skill-card">
+            <span class="skill-card__mono">WH</span>
+            <h3 class="skill-card__name">WHM</h3>
+            <p class="skill-card__desc">Gestión de servidores VPS y dedicados a nivel de root.</p>
+          </div>
+          <div class="skill-card">
+            <span class="skill-card__mono">Gh</span>
+            <h3 class="skill-card__name">Git & GitHub</h3>
+            <p class="skill-card__desc">Control de versiones y colaboración en desarrollo de software.</p>
+          </div>
+          <div class="skill-card">
+            <span class="skill-card__mono">El</span>
+            <h3 class="skill-card__name">Elementor</h3>
+            <p class="skill-card__desc">Maquetación y diseño de sitios sobre WordPress.</p>
+          </div>
+        </div>
+
+        <div class="tools-secondary" data-reveal>
+          <p class="tools-secondary__label">También en mi caja de herramientas:</p>
+          <ul class="chip-list">
+            <li class="chip chip--muted">Cpanel</li>
+            <li class="chip chip--muted">Django</li>
+            <li class="chip chip--muted">Node.js</li>
+            <li class="chip chip--muted">PostgreSQL</li>
+            <li class="chip chip--muted">SSH</li>
+            <li class="chip chip--muted">Docker</li>
+            <li class="chip chip--muted">AWS</li>
+            <li class="chip chip--muted">C#</li>
+            <li class="chip chip--muted">C++</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <p class="eyebrow" data-reveal>$ ls ./proyectos</p>
+        <h2 class="section__heading" data-reveal>Proyectos destacados</h2>
+        <p class="section__lead" data-reveal>
+          Una muestra de mi trayectoria: de aplicaciones funcionales a propuestas de ingeniería.
+        </p>
+
+        <div class="projects-grid" data-reveal>
+
+          <article class="project-card">
+            <div class="project-card__head">
+              <h3 class="project-card__title">Gestor de notas — SPA full-stack</h3>
+              <span class="badge">Aplicación web</span>
+            </div>
+            <p class="project-card__desc">
+              Aplicación de página única para crear notas, aplicarles etiquetas y filtrarlas
+              por categoría. Frontend en JavaScript y backend con Node.js y PostgreSQL,
+              desplegada sobre Linux.
+            </p>
+            <ul class="tag-list">
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>PostgreSQL</li>
+              <li>npm</li>
+              <li>Linux</li>
+            </ul>
+            <a class="project-card__link" href="https://github.com/jvaxpr/notes-app" target="_blank" rel="noopener noreferrer">
+              Explorar en GitHub
+              <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__head">
+              <h3 class="project-card__title">Gestión de Usuarios (Login, Activación, Bloqueo, Sesión)</h3>
+              <span class="badge">Aplicación web</span>
+            </div>
+            <p class="project-card__desc">
+              Proyecto ASP.NET Core MVC que implementa el flujo de autenticación diseñado en Figma: activación de cuenta → login con DNI/CE → control de intentos fallidos → bloqueo temporal → perfil de usuario → control de inactividad (20 min).              
+            </p>
+            <ul class="tag-list">
+              <li>ASP.NET Core MVC (.NET 9)</li>
+              <li>SQL Server</li>
+              <li>JavaScript</li>
+            </ul>
+            <a class="project-card__link" href="https://github.com/jvaxpr/LoginApp" target="_blank" rel="noopener noreferrer">
+              Explorar en GitHub
+              <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__head">
+              <h3 class="project-card__title">Agente de IA en Python</h3>
+              <span class="badge badge">Agente de IA</span>
+            </div>
+            <p class="project-card__desc">
+Agente conversacional de línea de comandos en Python, construido sobre la API de Gemini, capaz de usar herramientas externas como búsqueda web, calculadora y hora/fecha según la necesidad de cada consulta            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Google Generative AI (Gemini)</li>
+              <li>duckduckgo-search</li>
+              <li>CLI</li>
+            </ul>
+            <a class="project-card__link" href="https://github.com/jvaxpr/AI-agent-in-python" target="_blank" rel="noopener noreferrer">
+              Explorar en GitHub
+              <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+        <section class="section section--alt" id="contacto">
+      <div class="container">
+        <p class="eyebrow" data-reveal>$ ./contactar.sh</p>
+        <h2 class="section__heading" data-reveal>Hablemos</h2>
+        <p class="section__lead" data-reveal>
+          Disponible para pasantías, proyectos freelance o simplemente para conversar sobre tecnología.
+        </p>
+
+        <div class="contact__grid" data-reveal>
+
+          <div class="contact__direct">
+            <div class="contact__row contact__row--copyable">
+              <a class="contact__row-link" href="tel:+584244974269">
+                <span class="contact__icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <span>
+                  <span class="contact__label">Teléfono</span>
+                  <span class="contact__value">+58 424-4974269</span>
+                </span>
+              </a>
+              <button type="button" class="copy-btn" data-copy-text="+58 424-4974269">Copiar</button>
+            </div>
+
+            <a class="contact__row" href="mailto:javier.pena.rangel@gmail.com">
+              <span class="contact__icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <span>
+                <span class="contact__label">Correo</span>
+                <span class="contact__value">javier.pena.rangel@gmail.com</span>
+              </span>
+            </a>
+
+            <a href="assets/cv/Javier_Pena_CV.pdf" download class="btn btn--primary contact__cv-btn">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Descargar CV completo
+            </a>
+          </div>
+
+          <div class="contact__social">
+            <a class="social-btn" href="https://www.linkedin.com/in/jvaxpr" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667h-3.554V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>
+                <span class="social-btn__title">LinkedIn</span>
+                <span class="social-btn__sub">/in/jvaxpr</span>
+              </span>
+            </a>
+
+            <a class="social-btn" href="https://github.com/jvaxpr" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.230.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>
+                <span class="social-btn__title">GitHub</span>
+                <span class="social-btn__sub">/jvaxpr</span>
+              </span>
+            </a>
+
+            <a class="social-btn" href="https://www.instagram.com/jav4ssvss?igsh=Zmx5MGhqdHl2Nzg4&utm_source=qr" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span>
+                <span class="social-btn__title">Instagram</span>
+                <span class="social-btn__sub">@jav4ssvss</span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Javier Peña — construido con HTML, CSS &amp; JavaScript.</p>
+      <a href="#inicio" class="footer__top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
