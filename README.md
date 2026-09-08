@@ -1,11 +1,12 @@
 # Portafolio — Javier Peña
 
-> Desarrollador de software.
+> De administrar servidores a construir software.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![No build tools](https://img.shields.io/badge/build%20tools-ninguna-2DD4BF?style=flat)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
 ![Vista previa del portafolio](assets/screenshots/01-inicio.png)
 
@@ -14,9 +15,10 @@ Ingeniería en Computación en el Instituto Universitario Politécnico Santiago
 Mariño (sede Valencia) y Agente de Soporte de Hosting en camino a convertirse
 en desarrollador de software.
 
-🔗 **Demo en vivo:** _(próximamente)_
+🔗 **Demo en vivo:** [portfolio-javier-pena.vercel.app](https://portfolio-javier-pena.vercel.app)
 
 ## Vista previa
+
 <table>
   <tr>
     <td width="50%">
@@ -68,6 +70,13 @@ moderna:
 - **CSS3** — variables (custom properties), Grid y Flexbox, sin preprocesadores
 - **JavaScript** vanilla — sin librerías ni frameworks (`IntersectionObserver`,
   Clipboard API)
+
+## Despliegue
+
+El sitio está alojado en **[Vercel](https://vercel.com)**, conectado
+directamente a este repositorio. Cada `push` a la rama `main` dispara un
+despliegue automático, así que la versión en línea siempre refleja el
+último commit.
 
 ## Ejecutarlo localmente
 
